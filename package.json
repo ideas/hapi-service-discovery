@@ -1,0 +1,39 @@
+{
+  "name": "@ideapod/hapi-service-discovery",
+  "version": "1.0.1",
+  "description": "Service discovery plugin for the hapi framework.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "lab --assert code --coverage --lint --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ideas/hapi-service-discovery.git"
+  },
+  "keywords": [
+    "hapi",
+    "service",
+    "discovery",
+    "microservices"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ideas/hapi-service-discovery/issues"
+  },
+  "homepage": "https://github.com/ideas/hapi-service-discovery",
+  "dependencies": {
+    "joi": "7.3.x",
+    "request-promise": "2.0.x"
+  },
+  "peerDependencies": {
+    "hapi": ">=10.0.0"
+  },
+  "devDependencies": {
+    "code": "2.1.x",
+    "@ideapod/eslint-config": "ideas/eslint-config",
+    "hapi": "13.0.x",
+    "lab": "8.2.x",
+    "nock": "7.0.x",
+    "sinon": "1.17.x"
+  }
+}
