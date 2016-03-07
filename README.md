@@ -73,10 +73,8 @@ const UserService = server.plugins['hapi-service-discovery'].services.user;
 
 UserService.request('/test', { method: 'POST', body: { test: 'test' }, json: true })
   .then((response) => {
-    expect(response).to.equal('success');
-    done();
-  })
-  .catch(done);
+    // ...
+  });
 ```
 
 Under the hood the plugin uses the [`request`](https://www.npmjs.com/package/request) module.
