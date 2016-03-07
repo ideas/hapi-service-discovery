@@ -1,7 +1,7 @@
 'use strict';
 
 // Load external modules
-const Request = require('request-promise');
+const request = require('request-promise');
 
 class Service {
   constructor(host, port) {
@@ -9,8 +9,10 @@ class Service {
     this._port = port;
   }
 
-  get(path, options) {
-    return Request.get(`http://${this._host}:${this._port}${path}`, options);
+  request(path, options) {
+    return request(Object.assign({ method: 'GET' }, options, {
+      uri: `http://${this._host}:${this._port}${path}`
+    }));
   }
 }
 
