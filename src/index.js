@@ -7,8 +7,8 @@ exports.register = function (server, options, next) {
   const services = {};
 
   options.services.forEach((value) => {
-    const host = process.env[`${value.toUpperCase()}_SERVICE_HOST`];
-    const port = process.env[`${value.toUpperCase()}_SERVICE_PORT`];
+    const host = process.env[`SERVICE_${value.toUpperCase()}_HOST`];
+    const port = process.env[`SERVICE_${value.toUpperCase()}_PORT`];
 
     if (!host) {
       return next(new Error(`Host is missing for "${value}" service.`));
